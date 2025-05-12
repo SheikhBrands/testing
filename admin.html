@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakStore - Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">PakStore</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="auth-links">
+                        <a href="login.html" id="login-link">Login</a>
+                        <span id="user-greeting" style="display: none;"></span>
+                        <a href="#" id="logout-link" style="display: none;">Logout</a>
+                    </li>
+                    <li><a href="profile.html" id="profile-link" style="display: none;">Profile</a></li>
+                    <li><a href="admin.html" class="active" id="admin-link" style="display: none;">Admin</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="admin">
+            <div class="container">
+                <h2>Admin Dashboard</h2>
+                <div class="admin-tabs">
+                    <button class="active" data-tab="products">Products</button>
+                    <button data-tab="users">Users</button>
+                    <button data-tab="orders">Orders</button>
+                    <button data-tab="add-product">Add Product</button>
+                </div>
+                
+                <div class="admin-content">
+                    <div id="products-tab" class="tab-content active">
+                        <h3>Manage Products</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Category</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="products-table">
+                                <!-- Products will be loaded via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div id="users-tab" class="tab-content">
+                        <h3>Manage Users</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="users-table">
+                                <!-- Users will be loaded via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div id="orders-tab" class="tab-content">
+                        <h3>Manage Orders</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="orders-table">
+                                <!-- Orders will be loaded via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div id="add-product-tab" class="tab-content">
+                        <h3>Add New Product</h3>
+                        <form id="add-product-form">
+                            <div class="form-group">
+                                <label for="product-name">Product Name</label>
+                                <input type="text" id="product-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="product-price">Price (PKR)</label>
+                                <input type="number" id="product-price" required min="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="product-category">Category</label>
+                                <select id="product-category" required>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="clothing">Clothing</option>
+                                    <option value="home">Home & Living</option>
+                                    <option value="beauty">Beauty</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="product-image">Image URL</label>
+                                <input type="text" id="product-image" required placeholder="assets/images/products/example.jpg">
+                            </div>
+                            <div class="form-group">
+                                <label for="product-description">Description</label>
+                                <textarea id="product-description" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Add Product</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 PakStore. All rights reserved.</p>
+            <p>Designed exclusively for Pakistan</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

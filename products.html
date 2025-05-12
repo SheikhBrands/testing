@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakStore - Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">PakStore</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="auth-links">
+                        <a href="login.html" id="login-link">Login</a>
+                        <span id="user-greeting" style="display: none;"></span>
+                        <a href="#" id="logout-link" style="display: none;">Logout</a>
+                    </li>
+                    <li><a href="profile.html" id="profile-link" style="display: none;">Profile</a></li>
+                    <li><a href="admin.html" id="admin-link" style="display: none;">Admin</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Add this to your existing products.html -->
+<section class="products">
+    <div class="container">
+        <h2>Our Products</h2>
+        
+        <!-- Category Filter -->
+        <div class="category-filter">
+            <button class="category-btn active" data-category="all">All Products</button>
+            <button class="category-btn" data-category="electronics">Electronics</button>
+            <button class="category-btn" data-category="clothing">Clothing</button>
+            <button class="category-btn" data-category="home">Home & Living</button>
+            <button class="category-btn" data-category="beauty">Beauty</button>
+        </div>
+        
+        <!-- Search Box -->
+        <div class="search-filter">
+            <input type="text" id="search" placeholder="Search products...">
+        </div>
+        
+        <!-- Products Grid -->
+        <div class="products-grid" id="products-grid">
+            <!-- Products will be loaded here via JavaScript -->
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 PakStore. All rights reserved.</p>
+            <p>Designed exclusively for Pakistan</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
