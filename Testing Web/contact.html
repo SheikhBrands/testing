@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakStore - Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">PakStore</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li id="auth-links">
+                        <a href="login.html" id="login-link">Login</a>
+                        <span id="user-greeting" style="display: none;"></span>
+                        <a href="#" id="logout-link" style="display: none;">Logout</a>
+                    </li>
+                    <li><a href="profile.html" id="profile-link" style="display: none;">Profile</a></li>
+                    <li><a href="admin.html" id="admin-link" style="display: none;">Admin</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Our Information</h3>
+                        <p><strong>Email:</strong> info@pakstore.pk</p>
+                        <p><strong>Phone:</strong> +92 300 1234567</p>
+                        <p><strong>Address:</strong> 123 Main Boulevard, Lahore, Pakistan</p>
+                        <div class="social-links">
+                            <a href="#">Facebook</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Twitter</a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 PakStore. All rights reserved.</p>
+            <p>Designed exclusively for Pakistan</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

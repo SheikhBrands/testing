@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakStore - Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">PakStore</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="auth-links">
+                        <a href="login.html" id="login-link">Login</a>
+                        <span id="user-greeting" style="display: none;"></span>
+                        <a href="#" id="logout-link" style="display: none;">Logout</a>
+                    </li>
+                    <li><a href="profile.html" id="profile-link" style="display: none;">Profile</a></li>
+                    <li><a href="admin.html" id="admin-link" style="display: none;">Admin</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="checkout">
+            <div class="container">
+                <h2>Checkout</h2>
+                <div class="checkout-container">
+                    <div class="billing-info">
+                        <h3>Billing Information</h3>
+                        <form id="checkout-form">
+                            <div class="form-group">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" id="full-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="03XX-XXXXXXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea id="address" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <select id="city" required>
+                                    <option value="">Select City</option>
+                                    <option value="Karachi">Karachi</option>
+                                    <option value="Lahore">Lahore</option>
+                                    <option value="Islamabad">Islamabad</option>
+                                    <option value="Rawalpindi">Rawalpindi</option>
+                                    <option value="Faisalabad">Faisalabad</option>
+                                    <option value="Multan">Multan</option>
+                                    <option value="Peshawar">Peshawar</option>
+                                    <option value="Quetta">Quetta</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Gujranwala">Gujranwala</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="payment">Payment Method</label>
+                                <select id="payment" required>
+                                    <option value="">Select Payment</option>
+                                    <option value="cash">Cash on Delivery</option>
+                                    <option value="jazzcash">JazzCash</option>
+                                    <option value="easypaisa">EasyPaisa</option>
+                                    <option value="card">Credit/Debit Card</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div id="order-items">
+                            <!-- Order items will be loaded via JS -->
+                        </div>
+                        <div class="order-total">
+                            <p>Subtotal: PKR <span id="subtotal">0</span></p>
+                            <p>Shipping: PKR <span id="shipping">200</span></p>
+                            <p class="total">Total: PKR <span id="total">0</span></p>
+                        </div>
+                        <button type="submit" form="checkout-form" class="btn" id="place-order">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 PakStore. All rights reserved.</p>
+            <p>Designed exclusively for Pakistan</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
